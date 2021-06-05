@@ -1,6 +1,8 @@
 name: React CI
 
 on:
+  push:
+    branches: [master, development]
   pull_request:
     branches: [master, development]
 
@@ -22,13 +24,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
       
       - name: Install dependencies
-        run: npm install
-
-      - name: check for linting
-        run: npm run lint
+        run: yarn
         
-      - name: Run the tests
-        run: npm test
-
       - name: Build
-        run: npm run build
+        run: yarn run build
