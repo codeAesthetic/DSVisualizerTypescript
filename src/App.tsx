@@ -25,7 +25,7 @@ function App() {
   
   return (
     <div className="App">
-      <h1>Welcome To LinkedList Creator!</h1>
+      <h1>Welcome To LinkedList Creator</h1>
       <br />
       <input type="text" value={data} onChange={handleData} />
       <button onClick={addData}>Add</button>
