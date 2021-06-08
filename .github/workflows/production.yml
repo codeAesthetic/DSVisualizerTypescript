@@ -3,9 +3,6 @@ name: Production Deployment
 on:
   push:
     branches: [master]
-    types:
-      - opened
-      - synchronize
 
 jobs:
   # This job will:
