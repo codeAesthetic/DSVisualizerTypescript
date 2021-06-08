@@ -3,6 +3,14 @@ name: Integration
 on:
   pull_request:
     branches: [master]
+      types:
+        - opened
+        - synchronize
+  push:
+    branches: [master]
+    types:
+      - opened
+      - synchronize
 
 jobs:
   build:
