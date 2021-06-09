@@ -27,12 +27,11 @@ jobs:
       - name: Install dependencies
         run: yarn install
 
-      - name: Test Coverage
+      - name: Build
+        run: yarn run build
+
       - uses: artiomtr/jest-coverage-report-action@v1.3
         with:
             github_token: ${{ secrets.GITHUB_TOKEN }}
             test_script: yarn test:coverage
             threshold: 70
-
-      - name: Build
-        run: yarn run build
