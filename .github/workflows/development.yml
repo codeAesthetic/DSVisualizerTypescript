@@ -28,6 +28,11 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
+      - name: Add env variables
+        run:
+        env:
+          REACT_APP_TEST_KEY: TESTING_ENV
+
       # Run yarn install and build on our code
       - name: Install dependencies
         run: yarn install
