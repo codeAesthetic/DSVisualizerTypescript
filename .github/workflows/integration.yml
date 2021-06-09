@@ -30,7 +30,8 @@ jobs:
       - name: Build
         run: yarn run build
 
-      - uses: artiomtr/jest-coverage-report-action@v1.3
+      - name: Jest coverage report
+        uses: ArtiomTr/jest-coverage-report-action@v1.3
         with:
             github_token: ${{ secrets.GITHUB_TOKEN }}
             test_script: yarn test:coverage
