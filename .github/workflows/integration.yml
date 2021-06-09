@@ -29,7 +29,6 @@ jobs:
 
       - name: Test Coverage
       - uses: artiomtr/jest-coverage-report-action@v1.3
-        run: yarn test:coverage
         with:
             github_token: ${{ secrets.GITHUB_TOKEN }}
             test_script: yarn test:coverage
