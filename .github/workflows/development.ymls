@@ -31,8 +31,11 @@ jobs:
       # Run yarn install and build on our code
       - name: Install dependencies
         run: yarn install
+
       - name: Build
         run: yarn run build
+        env:
+          REACT_APP_TEST_KEY: ${{ secrets.DEV_TEST_KEY }}
 
       # Deploy to Netlify
       - name: Deploy draft to Netlify

@@ -6,8 +6,6 @@ on:
     types:
       - opened
       - synchronize
-  push:
-    branches: [master]
 
 jobs:
   build:
@@ -31,3 +29,10 @@ jobs:
 
       - name: Build
         run: yarn run build
+
+      - name: Jest coverage report
+        uses: ArtiomTr/jest-coverage-report-action@v1.3
+        with:
+            github_token: ${{ secrets.GITHUB_TOKEN }}
+            test_script: yarn test --silent --ci --coverage --coverageReporters=text --coverageReporters=text-summary
+            threshold: 70
