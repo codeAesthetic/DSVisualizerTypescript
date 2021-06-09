@@ -29,6 +29,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
       - name: Add env variables
+        run: echo "Hello $FIRST_NAME $REACT_APP_TEST_KEY"
         env:
           REACT_APP_TEST_KEY: ${{ secrets.DEV_TEST_KEY }}
 
