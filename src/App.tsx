@@ -8,6 +8,7 @@ const list = new LinkedList<any>();
 const { REACT_APP_TEST_KEY } = process.env;
 
 console.log( REACT_APP_TEST_KEY, ">>>>>>>")
+console.log( process.env, ">>>>>>>")
 
 function App() {
   const [data, setData] = useState("");
