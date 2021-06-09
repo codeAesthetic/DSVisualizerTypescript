@@ -13,7 +13,7 @@ function App() {
 //  // useEffect(() => {
   //   ["head", 1, 2, 3, 4, "tail"].forEach((data) => list.append(data));
   // }, []);
-
+ 
   // const handleData = ({ target: { value } }: any) => {
   //   setData(value);
   // };
