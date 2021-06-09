@@ -10,7 +10,7 @@ import "./App.css";
 function App() {
   // const [data, setData] = useState("");
 
-  // useEffect(() => {
+//  // useEffect(() => {
   //   ["head", 1, 2, 3, 4, "tail"].forEach((data) => list.append(data));
   // }, []);
 
