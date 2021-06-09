@@ -26,11 +26,6 @@
     "eject": "react-scripts eject",
     "lint": "eslint src"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn lint && yarn test --watchAll=false"
-    }
-  },
   "eslintConfig": {
     "extends": [
       "react-app",
