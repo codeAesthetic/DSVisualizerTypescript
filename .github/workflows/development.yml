@@ -28,16 +28,16 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: Add env variables
-        run: echo "$REACT_APP_TEST_KEY"
-        env:
-          REACT_APP_TEST_KEY: TESTING_ENV
-
       # Run yarn install and build on our code
       - name: Install dependencies
         run: yarn install
+        env:
+          REACT_APP_TEST_KEY: TESTING_ENV
+
       - name: Build
         run: yarn run build
+        env:
+          REACT_APP_TEST_KEY: TESTING_ENV
 
       # Deploy to Netlify
       - name: Deploy draft to Netlify
